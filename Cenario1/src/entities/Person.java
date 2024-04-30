@@ -6,7 +6,7 @@ import java.util.List;
 public class Person {
 
     private String name;
-    private List<Person> spouse;
+    private Person spouse;
     private List<Person> children;
 
     public Person() {
@@ -15,7 +15,6 @@ public class Person {
     public Person(String name) {
         this.name = name;
         this.children = new ArrayList<>();
-        this.spouse = new ArrayList<>();
     }
 
     public String getName() {
@@ -26,11 +25,11 @@ public class Person {
         this.name = name;
     }
 
-    public List<Person> getSpouse() {
+    public Person getSpouse() {
         return spouse;
     }
 
-    public void setSpouse(List<Person> spouse) {
+    public void setSpouse(Person spouse) {
         this.spouse = spouse;
     }
 
@@ -42,16 +41,28 @@ public class Person {
         this.children = children;
     }
 
-    public void addChild(Person person) {
-
+    public void addChild(Person child) {
+        children.add(child);
     }
 
-    public String addSpouse(Person person) {
-        spouse.add(person);
-        return person.toString();
+    public void addSpouse(Person spouse) {
+        this.spouse = spouse;
+        spouse.spouse = this;
+
     }
 
     public void printFamilyTree(){
-        System.out.println(getName() + " -- Married to: " + spouse.get(0).getName());
+        System.out.println(getName() + " -- Married to: " + spouse.getName() + " -- Their children: \n" + children.get(0).getName());
+
+    }
+
+    public void printFamilyTreeHelper(Person person, int aux){
+
     }
 }
+
+
+
+
+
+
