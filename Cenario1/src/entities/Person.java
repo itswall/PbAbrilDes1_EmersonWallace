@@ -52,12 +52,31 @@ public class Person {
     }
 
     public void printFamilyTree(){
-        System.out.println(getName() + " -- Married to: " + spouse.getName() + " -- Their children: \n" + children.get(0).getName());
-
+        printFamilyTreeHelper(this, 0);
     }
 
-    public void printFamilyTreeHelper(Person person, int aux){
 
+    public void printFamilyTreeHelper(Person person, int rec) {
+
+        StringBuilder fancyLine = new StringBuilder();
+        for(int i=0; i<rec; i++){
+            fancyLine.append("  ");
+        }
+
+        System.out.print(fancyLine + person.getName());
+
+        if(person.spouse != null){
+            System.out.println(fancyLine.delete(0, 4) + "-- Married to: " + person.spouse.getName() + " -- Their children:");
+        }
+        else if(person.children == null){
+            System.out.println(fancyLine + "-- None");
+        }
+        else{
+            System.out.println(fancyLine.delete(0, 5) + "-- Single");
+        }
+        for(Person child : person.getChildren()){
+            printFamilyTreeHelper(child, rec + 1);
+        }
     }
 }
 
