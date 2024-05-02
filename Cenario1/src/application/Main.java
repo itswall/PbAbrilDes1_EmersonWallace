@@ -14,7 +14,7 @@ public class Main {
         lily.addSpouse(new Person("Wilhelm"));
 
         // Children of Lily and Wilhelm
-        Person opa = new Person("Opa");
+        Person opa = new Person("Opa", lily);
         lily.addChild(opa);
 
         // Spouse of Oma
@@ -22,9 +22,9 @@ public class Main {
         opa.addSpouse(oma);
 
         // Children of Oma and Opa
-        Person reinhold = new Person("Reinhold");
-        Person wilma = new Person("Wilma");
-        Person sigrid = new Person("Sigrid");
+        Person reinhold = new Person("Reinhold", opa);
+        Person wilma = new Person("Wilma", opa);
+        Person sigrid = new Person("Sigrid", opa);
 
         opa.addChild(reinhold);
         opa.addChild(wilma);
@@ -34,9 +34,9 @@ public class Main {
         reinhold.addSpouse(new Person("Sonia"));
 
         // Children of Reinhold and Sonia
-        Person christian = new Person("Christian");
-        Person gabrielle = new Person("Gabrielle");
-        Person sabine = new Person("Sabine");
+        Person christian = new Person("Christian", reinhold);
+        Person gabrielle = new Person("Gabrielle", reinhold);
+        Person sabine = new Person("Sabine", reinhold);
 
         reinhold.addChild(christian);
         reinhold.addChild(gabrielle);
@@ -56,15 +56,15 @@ public class Main {
 
         // Spouse and children of Christian
         christian.addSpouse(new Person("Monica"));
-        Person oscar = new Person("Oscar");
-        Person lorena = new Person("Lorena");
+        Person oscar = new Person("Oscar", christian);
+        Person lorena = new Person("Lorena", christian);
 
         // Children and spouse of Sigrid
         sigrid.addSpouse(new Person("Peter"));
 
-        Person martin = new Person("Martin");
-        Person thomas = new Person("Thomas");
-        Person claudia = new Person("Claudia");
+        Person martin = new Person("Martin", sigrid);
+        Person thomas = new Person("Thomas", sigrid);
+        Person claudia = new Person("Claudia", sigrid);
 
         sigrid.addChild(martin);
         sigrid.addChild(thomas);
