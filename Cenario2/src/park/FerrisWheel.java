@@ -83,4 +83,27 @@ public class FerrisWheel {
         }
     }
 
+    //method for two children
+    public void seat(int seatNum, Child personX, Child personY) {
+        if (personX.getAge() < 12 || personY.getAge() < 12){
+            seat[seatNum - 1] = null;
+        }
+        else if(seat[seatNum - 1] != null){
+            for(int i = 0; i<seat.length; i++){
+                if(seat[i] == null){
+                    seat[i] = new Gondola();
+                    seat[i].setNum(seatNum);
+                    seat[i].setSeatX(personX);
+                    seat[i].setSeatY(personY);
+                }
+            }
+        }
+        else{
+            seat[seatNum - 1] = new Gondola();
+            seat[seatNum - 1].setNum(seatNum);
+            seat[seatNum - 1].setSeatX(personX);
+            seat[seatNum - 1].setSeatY(personY);
+        }
+    }
+    
 }
