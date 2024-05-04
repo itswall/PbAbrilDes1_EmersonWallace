@@ -58,4 +58,29 @@ public class FerrisWheel {
             seat[seatNum - 1].setSeatY(person);
         }
     }
+
+    //method for a child and responsible
+    public void seat(int seatNum, Child personX, Adult personY) {
+        if (personX.getResponsible().equals(personY)){
+            if(seat[seatNum-1] != null){
+                for(int i = 0; i<seat.length; i++){
+                    if(seat[i] == null){
+                        seat[i] = new Gondola();
+                        seat[i].setNum(seatNum);
+                        seat[i].setSeatX(personX);
+                        seat[i].setSeatY(personY);
+
+                    }
+                }
+            }
+            else{
+                seat[seatNum - 1] = new Gondola();
+                seat[seatNum - 1].setNum(seatNum);
+                seat[seatNum - 1].setSeatX(personX);
+            }
+        } else{
+            seat[seatNum - 1] = null;
+        }
+    }
+
 }
