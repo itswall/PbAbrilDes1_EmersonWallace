@@ -28,7 +28,7 @@ public class FerrisWheel {
         } else {
             seat[seatNum - 1] = new Gondola();
             seat[seatNum - 1].setNum(seatNum);
-            seat[seatNum - 1].setSeatY(personX);
+            seat[seatNum - 1].setSeatX(personX);
         }
     }
 
@@ -45,7 +45,7 @@ public class FerrisWheel {
                     if (seat[i] == null) {
                         seat[i] = new Gondola();
                         seat[i].setNum(seatNum);
-                        seat[i].setSeatY(personX);
+                        seat[i].setSeatX(personX);
                     } else if (seat[i].getSeatY() == null) {
                         seat[i].setNum(seatNum);
                         seat[i].setSeatY(personX);
@@ -55,7 +55,7 @@ public class FerrisWheel {
         } else {
             seat[seatNum - 1] = new Gondola();
             seat[seatNum - 1].setNum(seatNum);
-            seat[seatNum - 1].setSeatY(personX);
+            seat[seatNum - 1].setSeatX(personX);
         }
     }
 
@@ -69,7 +69,6 @@ public class FerrisWheel {
                         seat[i].setNum(seatNum);
                         seat[i].setSeatX(personX);
                         seat[i].setSeatY(personY);
-
                     }
                 }
             }
@@ -77,6 +76,8 @@ public class FerrisWheel {
                 seat[seatNum - 1] = new Gondola();
                 seat[seatNum - 1].setNum(seatNum);
                 seat[seatNum - 1].setSeatX(personX);
+                seat[seatNum - 1].setSeatY(personY);
+
             }
         } else{
             seat[seatNum - 1] = null;
@@ -106,18 +107,20 @@ public class FerrisWheel {
         }
     }
 
-    public void status(){
+    public void status() {
         System.out.println("------------ Ferris Wheel Status ------------");
 
-        for(int i = 0; i<seat.length; i++){
-            if(seat[i] == null){
-                System.out.println("Seat " + i + " is empty");
-            }
-            else if(seat[i].getSeatY() == null){
-                System.out.println(seat[i].getSeatX().getName() + "Is alone :(");
-            }
-            else{
-                System.out.println(seat[i].getSeatX().getName() + "And" + seat[i].getSeatY().getName());
+        for(int i = 0; i < seat.length; i++) {
+            if (seat[i] == null) {
+                System.out.println("Gondola " + (i + 1) + ": " + " is empty");
+            } else {
+                if (seat[i].getSeatX() == null && seat[i].getSeatY() == null) {
+                    System.out.println("Gondola " + (i + 1) + ": " + " is empty");
+                } else if (seat[i].getSeatY() == null) {
+                    System.out.println("Gondola " + (i + 1) + ": " + seat[i].getSeatX().getName() + " is alone :(");
+                } else {
+                    System.out.println("Gondola " + (i + 1) + ": " + seat[i].getSeatX().getName() + " And " + seat[i].getSeatY().getName());
+                }
             }
         }
     }
