@@ -1,14 +1,14 @@
-<h1>Cenário 3</h1>
-A criação de um script com somente das tabelas Gondola e Pessoa do cenário 2, com suas respectivas chaves e relacionamentos. Colocando o que foi aprendido de sql no progama de bolsas
+<h1>Challenge 3</h1>
+The creation of a script with only the Gondola, Adult and Child tables from challenge 2, with their respective keys and relationships. Putting what was learned about SQL into the scholarship program
 
-<h1>Tecnologias Utilizadas</h1>
-mySQL: para criação do banco de dados e suas respectivas tabelas
+<h1>Technologies used</h1>
+mySQL: to create the database and its respective tables
 
-<h1>Pré-requisitos</h1>
-Certifique-se de ter uma aplicação que leia a extensão .sql, de preferência o próprio "mySQL" que foi utilizado
+<h1>Prerequisites</h1>
+Make sure you have an application that reads the .sql extension, preferably the "mySQL" itself that was used
 
-<h1>Instalação</h1>
-Clone este repositório: git clone https://github.com/loserawr/PbAbrilDes1_EmersonWallace.git
+<h1>Installation</h1>
+Clone this repository: git clone https://github.com/loserawr/PbAbrilDes1_EmersonWallace.git
 
-<h1>Execução</h1>
-Abra o repositorio (onde você salvou), va até a diretorio do cenario 3 e execute o arquivo "Gondola.sql" com o mySQL WorkBench, ou outra aplicação que usar para ler
+<h1>Execution</h1>
+Open the repository (where you saved it), go to the scenario 3 directory and run the "Gondola.sql" file with mySQL WorkBench, or another application you use to read
