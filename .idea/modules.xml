@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cenario1/Cenario1.iml" filepath="$PROJECT_DIR$/Cenario1/Cenario1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cenario2/Cenario2.iml" filepath="$PROJECT_DIR$/Cenario2/Cenario2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CenarioExtra/CenarioExtra.iml" filepath="$PROJECT_DIR$/CenarioExtra/CenarioExtra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PbAbrilDes1_EmersonWallace.iml" filepath="$PROJECT_DIR$/.idea/PbAbrilDes1_EmersonWallace.iml" />
+    </modules>
+  </component>
+</project>
